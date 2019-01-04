@@ -1,10 +1,10 @@
 .container {
-  padding:5px 30px 30px 30px;
-  margin:30px;
+  padding:10px 30px 30px 30px;
+  margin:10px;
   border:solid white 1px;
   border-radius:5px;
-  /*background-color:#e6e6e6;*/
-  text-align:center;
+  /*background-color:#fff000;*/
+  text-align:left;
 }
 
 .btn-success, .btn-danger {
