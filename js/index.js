@@ -48,9 +48,9 @@ document.getElementById("buy_click").onclick = function() {
     var e = document.getElementById("clicks_per_second");
     e.innerHTML = auto_clicks;
     var e2 = document.getElementById("buy_click");
-    e2.innerHTML = 'Buy for ' + cost;
+    e2.innerHTML = '' + cost;
     var e2 = document.getElementById("autoclicker_level");
-    e2.innerHTML = 'lvl  ' + auto_clicks;
+    e2.innerHTML = 'TIER  ' + auto_clicks;
 };
 document.getElementById("upgrade_speed").onclick = function() {
     var upgrade_cost = (Math.pow(3, upgrade_speed)) * 100;
@@ -59,9 +59,9 @@ document.getElementById("upgrade_speed").onclick = function() {
     click_rate = click_rate * 0.90;
     update_workers();
     var e2 = document.getElementById("upgrade_speed");
-    e2.innerHTML = 'Buy for ' + ((Math.pow(3, upgrade_speed)) * 100);
+    e2.innerHTML = '' + ((Math.pow(3, upgrade_speed)) * 100);
     var e2 = document.getElementById("speed_level");
-    e2.innerHTML = 'lvl  ' + upgrade_speed;
+    e2.innerHTML = 'TIER  ' + upgrade_speed;
 };
 
 //Increase Click Increment
@@ -71,7 +71,7 @@ document.getElementById("increase_clicks").onclick = function() {
     click_increment++;
     update_workers();
     var e2 = document.getElementById("click_increment");
-    e2.innerHTML = 'Buy for ' + ((Math.pow(3, click_increment)) * 100);
+    e2.innerHTML = '' + ((Math.pow(3, click_increment)) * 100);
 };
 
 //Start Autoclickers
