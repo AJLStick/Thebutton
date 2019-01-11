@@ -2,14 +2,14 @@
 var num = 0;
 
 window.onload = function () {
-        var name = prompt("What is your name");
+        var name = prompt("Name?");
         
         var space = document.getElementById("space");
         
-        space.innerHTML = name + "'s Bakery";
+        space.innerHTML = name + "";
 }
 
-var cookie = document.getElementById("cookie");
+var cookie = document.getElementById("stick");
 
 function cookieClick() { 
     num += 1;
@@ -23,24 +23,24 @@ function cookieClick() {
     //automatic Granny upgrade to 2x
     if(num >= 30 ){
         num += 2;
-        upgradeLevel.innerHTML = "Granny Level";
+        upgradeLevel.innerHTML = "Stick Picker Level";
     }
 
     //automatic factory upgrade to 10x
     if(num >= 500) {
         num += 10;
-        upgradeLevel.innerHTML = "Factory Level";
+        upgradeLevel.innerHTML = "Chainsaw Level";
     }
 
     //automatic plant upgrade to 30x
     if(num >= 1000) {
         num += 30;
-        upgradeLevel.innerHTML = "Plant Level";
+        upgradeLevel.innerHTML = "Dual Axes Level";
     }
 
     //automatic super factory upgrade to 1000x
     if(num >= 100000) {
         num += 1000;
-        upgradeLevel.innerHTML = "Super-Plant Level";
+        upgradeLevel.innerHTML = "One Fell Swoop Level";
     }
 }
