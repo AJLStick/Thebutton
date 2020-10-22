@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS</title>
 <style>
-#grey{background-color:grey;}
-h2{padding:0px; margin:0px;}
-#auth{background-color:black;}
-</style>
-<body><pre>
+#myProgress {
+  width: 90%;
+  background-color: silver;
+}
 
-<div><h2> <font color=yellow>△</font> You must authorize yourself
-before accessing this page.<Font color=yellow>△</font></h2>
-<div id="grey"><div id="auth" style="height:10px;width:0"></div></div><br><button onclick="move()">Authorize</button> </div>
-<p id="next">a</p>
+#myBar {
+  width: 0.1%;
+  height: 10px;
+  background-color: black;
+}
+#content{
+    display:none;
+}
+button{border:1px solid black;}
+</style>
+<body>
+<pre>
+<h1> △ You must authorize yourself
+before accessing this page! △
+</h1><div id="myProgress"><div id="myBar"></div></div><br>
+<button id="click" onclick="move()">Click Me</button> 
+<div id="content"><a href="secret001"><button>NEXT</button></a></div>
 <script>
 function move() {
-  var elem = document.getElementById("auth");   
+  var elem = document.getElementById("myBar");   
   var width = 1;
-  var id = setInterval(frame, 10);
+  var id = setInterval(frame, 20);
   function frame() {
     if (width >= 100) {
       clearInterval(id);
+document.getElementById('content').style.display='block';
+document.getElementById('click').style.display='none';
     } else {
       width++; 
       elem.style.width = width + '%'; 
     }
-    
-    
-  
   }
 }
-
 </script>
-<script>
-function next() {
-if (width == 100) {
-document.getElementById("next").innerHTML = "done! [link]";
 
-}
-}
-</script>
 </body>
-</html> 
+</html>
