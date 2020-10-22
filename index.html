@@ -1,86 +1,43 @@
-<html lang="en"><head>
-  <meta charset="UTF-8">
-  <title>Stick.</title>
-  
-  
-  
-      <link rel="stylesheet" href="css/style.css">
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<style>
+#grey{background-color:grey;}
+h2{padding:0px; margin:0px;}
+#auth{background-color:black;}
+</style>
+<body><pre>
 
-  
-</head>
-
-<body>
-
-  
+<div><h2> <font color=yellow>△</font> You must authorize yourself
+before accessing this page.<Font color=yellow>△</font></h2>
+<div id="grey"><div id="auth" style="height:10px;width:0"></div></div><br><button onclick="move()">Authorize</button> </div>
+<p id="next">a</p>
+<script>
+function move() {
+  var elem = document.getElementById("auth");   
+  var width = 1;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+    }
     
-        <script type="text/javascript" src="js/cookie.js"></script>
-        <title>Stick.</title>
-        <link rel="stylesheet" href="style.css">
     
-
-    
-        <div id="space">AJL</div>
-        <div id="cookie" onclick="cookieClick()">
-            <img src="https://ajlstick.github.io/thebutton/pixil-frame-0.png" width="208px">
-        </div>
-        
-        <p>sticks:</p>
-        
-        <div id="numbers">195</div>
-        <div id="upgradeLevel">Stick Picker Level</div>
-
-        <p>Click to gather sticks.</p>
-        <p>Upgrades are automatic</p>
-
-                                            <table style="
-    color: white;
-    border-left-width: 2px;
-    margin-left: 95px;
-">
-            <tbody><tr>
-                <td>Name</td>
-                <td>Stick upg.</td>
-                <td>cost</td>
-            </tr>
-            
-            <tr>
-                <td>Stick Picker</td>
-                <td>2x</td>
-                <td>30 sticks</td>
-            </tr>
-            
-            <tr>
-                <td>Chainsaw</td>
-                <td>10x</td>
-                <td>500 sticks</td>
-            </tr>
-            
-            <tr>
-                <td>Dual Axes</td>
-                <td>30x</td>
-                <td>1000 sticks</td>
-            </tr>
-            
-             <tr>
-                <td>One Fell Swoop</td>
-                <td>1000x</td>
-                <td>100000 sticks</td>
-            </tr>
-
-        </tbody></table>
-    
-
   
-  
+  }
+}
 
-    <script src="js/index.js"></script>
+</script>
+<script>
+function next() {
+if (width == 100) {
+document.getElementById("next").innerHTML = "done! [link]";
 
-
-
-
-
-
-
-
-
-</body></html>
+}
+}
+</script>
+</body>
+</html> 
